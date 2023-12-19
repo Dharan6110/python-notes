@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Examples</title>
+</head>
+<body>
+
+<h2>Check if a given number is a float:</h2>
+<pre>
+a = eval(input("Enter value: "))
+if type(a) == float:
+    print("It is a float")
+else:
+    print("Not a float")
+</pre>
+
+<h2>Check if a string has exactly 5 letters:</h2>
+<pre>
+s = input("Enter string: ")
+if len(s) == 5:
+    print("Exact 5 letters word")
+else:
+    print("Not a 5 letters word")
+</pre>
+
+<h2>Check if a number is 2-digit:</h2>
+<pre>
+a = int(input())
+if 10 <= a <= 99:
+    print('2 - Digit')
+</pre>
+
+<h2>Check if the last value of a list is a string:</h2>
+<pre>
+a = eval(input("Enter the list : "))
+if type(a[-1]) == str:
+    print("String")
+</pre>
+
+<h2>Check if the last element in a list (input as a string) is a string:</h2>
+<pre>
+input_list = input("Enter the list separated by spaces: ").split()
+if input_list and isinstance(input_list[-1], str):
+    print("The last element is a string.")
+else:
+    print("The last element is not a string or the list is empty.")
+</pre>
+
+<h2>Check if two strings have the same length:</h2>
+<pre>
+a = input("Enter the string :")
+b = input("Enter the string :")
+if len(a) == len(b):
+    print(f"{a} * {b} = ", len(a) * len(b))
+if a == b[::-1]:
+    print(a + b)
+</pre>
+
+<h2>Check if data is a single or multiple value data type:</h2>
+<pre>
+Svdt = int, float, bool, complex
+Mvdt = str, list, tuple, dict, set
+data = eval(input("Enter the data :"))
+if (type(data)) in [int, str, float, complex, bool]:
+    print("Single value data type")
+else:
+    print("Multiple value data type")
+</pre>
+
+<h2>Check if a character is capital or not:</h2>
+<pre>
+char = input("Enter the string:")
+if 'A' <= char <= 'Z':
+    print("Capital")
+else:
+    print("Not capital")
+</pre>
+
+<h2>Try-except block for checking if the last element of a list is a string with length >= 5:</h2>
+<pre>
+try:
+    a = eval(input("Enter the list : "))
+    if type(a[-1]) == str and len(a[-1]) >= 5:
+        print("String")
+except Exception as e:
+    print("Not valid input")
+</pre>
+
+<h2>Check if a list is homogenous or heterogenous:</h2>
+<pre>
+a = [1, 'Dharan']
+if type(a[0]) == type(a[1]):
+    print("Homogenous")
+else:
+    print("Heterogenous")
+</pre>
+
+<h2>Find the highest among 5 numbers:</h2>
+<pre>
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+num4 = int(input("Enter the fourth number: "))
+num5 = int(input("Enter the fifth number: "))
+highest_number = max(num1, num2, num3, num4, num5)
+print(f"The highest number among {num1}, {num2}, {num3}, {num4}, and {num5} is: {highest_number}")
+</pre>
+
+<h2>Sort and find max and min in a list:</h2>
+<pre>
+a = [12, 45, 2, 33, 74, 76]
+a.sort()
+print(a)
+print(max(a))
+print(min(a))
+</pre>
+
+<h2>Check if a number is divisible by 5 and even or odd:</h2>
+<pre>
+num = int(input("Enter the value: "))
+if num % 5 == 0:
+    if num % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+else:
+    print("Not divisible by 5")
+</pre>
+
+<h2>Find vowel or consonant:</h2>
+<pre>
+char = input("Enter the char :")
+if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
+    if char in 'AEIOUaeiou':
+        print("Vowel")
+    else:
+        print("Consonant")
+else:
+    print("Enter an alphabet from A to Z or a to z")
+</pre>
+
+<h2>Create a login ID with email and password:</h2>
+<pre>
+email = 'bdnr91@gmail.com'
+Password = 'Dharan'
+user_id = input("Enter the mail : ")
+Password_id = input("Enter the Password :")
+if email == user_id:
+    if Password == Password_id:
+        print("Welcome to Email..!")
+    else:
+        print("Enter a valid Password")
+else:
+    print("Invalid User ID")
+</pre>
+
+<h2>While loop examples:</h2>
+<pre>
+<!-- Example 1 -->
+i = 1
+while i <= 10:
+    print(i, end='')
+    i += 1
+
+<!-- Example 2 -->
+i = 1
+while i <= 10:
+    print(i**2, end=' ')
+    i += 1
+
+<!-- Example 3 -->
+i = 1
+while i <= 10:
+    print(i**3, end=' ')
+    i += 1
+
+<!-- Example 4 -->
+i = 1
+while i <= 10:
+    print(f"3 x {i} = ", i*3)
+    i += 1
+
+<!-- Example 5 -->
+m = 1
+n = int(input("Enter n :"))
+while m <= n:
+    if m % 5 == 0:
+        print(m, end=' ')
+    m += 1
+
+<!-- Example 6 -->
+Sum of "n" natural numbers
+i = 1
+num = int(input("Enter a num :"))
+sum = 0
+while i <= num:
+    sum += i
+    i += 1
+print(sum)
+
+<!-- Example 7 -->
+Product of n natural numbers
+i = 1
+num = int(input("Enter a num :"))
+Product = 1
+while i <= num:
+    Product *= i
+    i += 1
+print(Product)
+
+<!-- Example 8 -->
+Reverse a number
+num = int(input("Enter num"))
+rev = 0
+while num > 0:
+    rem = num % 10
+    rev = (rev * 10) + rem
+    num //= 10
+print(rev)
+
+<!-- Example 9 -->
+Palindrome of a number
+num = int(input("Enter the number:___"))
+rev = 0
+temp = num
+while temp != 0:
+    rem = temp % 10
+    rev = rev * 10 + rem
+    temp = temp // 10
+if num == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+<!-- Example 10 -->
+Reverse a given string
+a = input("Enter a string:_________")
+revstr = ""
+i = len(a) - 1
+while i >= 0:
+    revstr = revstr + a[i]
+    i -= 1
+print(revstr)
+<p>     OR
+    
+my_string = "Hello, World!"
+reversed_string = my_string[::-1]
+print(reversed_string)</p>
+
+<pre>
+    
+</pre>
+</pre>
+
+</body>
+</html>

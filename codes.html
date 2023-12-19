@@ -1,0 +1,450 @@
+Certainly! Here are the Python code snippets in a neat manner, numbered for reference:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Examples</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Python Code Examples</h1>
+
+<!-- 1. Hello, World! -->
+<pre><code>
+print("Hello, World!")
+</code></pre>
+
+<!-- 2. Variables and Data Types -->
+<pre><code>
+# Variables and Data Types
+name = "John"
+age = 25
+height = 1.75
+is_student = True
+</code></pre>
+
+<!-- 3. Input and Output -->
+<pre><code>
+# Input and Output
+user_input = input("Enter something: ")
+print("You entered:", user_input)
+</code></pre>
+
+<!-- 4. Basic Math -->
+<pre><code>
+# Basic Math
+a = 5
+b = 3
+sum_result = a + b
+difference_result = a - b
+product_result = a * b
+quotient_result = a / b
+</code></pre>
+
+<!-- 5. Conditional Statements -->
+<pre><code>
+# Conditional Statements
+num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive number")
+elif num < 0:
+    print("Negative number")
+else:
+    print("Zero")
+</code></pre>
+
+<!-- 6. Loops -->
+<pre><code>
+# For loop
+for i in range(5):
+    print(i)
+</code></pre>
+
+<pre><code>
+# While loop
+num = 3
+while num > 0:
+    print(num)
+    num -= 1
+</code></pre>
+
+<!-- 7. Functions -->
+<pre><code>
+# Functions
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(3, 5)
+print(f"The sum is: {result}")
+</code></pre>
+
+<!-- 8. Lists -->
+<pre><code>
+# Lists
+numbers = [1, 2, 3, 4, 5]
+print("List:", numbers)
+print("Sum:", sum(numbers))
+</code></pre>
+
+<!-- 9. Strings -->
+<pre><code>
+# Strings
+text = "Hello, Python!"
+print("Length:", len(text))
+print("Uppercase:", text.upper())
+</code></pre>
+
+<!-- 10. Tuples -->
+<pre><code>
+# Tuples
+coordinates = (3, 4)
+print("Coordinates:", coordinates)
+</code></pre>
+
+<!-- 11. List Comprehension -->
+<pre><code>
+# List Comprehension
+squares = [x**2 for x in range(1, 6)]
+print("Squares:", squares)
+</code></pre>
+
+<!-- 12. Dictionaries -->
+<pre><code>
+# Dictionaries
+student = {'name': 'John', 'age': 20, 'grade': 'A'}
+print("Student:", student)
+print("Age:", student['age'])
+</code></pre>
+
+<!-- 13. Sets -->
+<pre><code>
+# Sets
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+union_set = set1.union(set2)
+print("Union Set:", union_set)
+</code></pre>
+
+<!-- 14. Classes and Objects -->
+<pre><code>
+# Classes and Objects
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print("Woof!")
+
+dog1 = Dog("Buddy", 3)
+print(f"{dog1.name} is {dog1.age} years old.")
+dog1.bark()
+</code></pre>
+
+<!-- 15. Exception Handling -->
+<pre><code>
+# Exception Handling
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+except ValueError:
+    print("Invalid input. Please enter a number.")
+</code></pre>
+
+<!-- 16. File Handling (Writing and Reading) -->
+<pre><code>
+# File Handling (Writing and Reading)
+with open("example.txt", "w") as file:
+    file.write("Hello, File!")
+
+with open("example.txt", "r") as file:
+    content = file.read()
+    print("File Content:", content)
+</code></pre>
+
+<!-- 17. File Handling (Appending) -->
+<pre><code>
+# File Handling (Appending)
+with open("example.txt", "a") as file:
+    file.write("\nAppending more text.")
+
+with open("example.txt", "r") as file:
+    content = file.read()
+    print("Updated Content:", content)
+</code></pre>
+
+<!-- 18. Lambda Functions -->
+<pre><code>
+# Lambda Functions
+# Lambda function to calculate the square of a number
+square = lambda x: x**2
+print("Square:", square(5))
+</code></pre>
+
+<!-- 19. Using map to double each element in a list -->
+<pre><code>
+# Using map to double each element in a list
+numbers = [1, 2, 3, 4, 5]
+doubled_numbers = list(map(lambda x: x * 2, numbers))
+print("Doubled Numbers:", doubled_numbers)
+</code></pre>
+
+<!-- 20. Using filter to get even numbers from a list -->
+<pre><code>
+# Using filter to get even numbers from a list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print("Even Numbers:", even_numbers)
+</code></pre>
+
+<!-- 21. Try-Except-Finally -->
+<pre><code>
+# Try-Except-Finally
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+except ValueError:
+    print("Invalid input. Please enter a number.")
+finally:
+    print("Execution complete.")
+</code></pre>
+
+<!-- 22. Enumerate -->
+<pre><code>
+# Enumerate
+# Using enumerate to get index and value
+fruits = ["apple", "banana", "cherry"]
+for index, value in enumerate(fruits):
+    print(index, value)
+</code></pre>
+
+<!-- 23. Zip -->
+<pre><code>
+# Zip
+# Using zip to combine two lists
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 22]
+combined = list(zip(names, ages))
+print("Combined:", combined)
+</code></pre
+
+>
+
+<!-- 24. List Slicing -->
+<pre><code>
+# List Slicing
+numbers = [1, 2, 3, 4, 5]
+subset = numbers[1:4]
+print("Subset:", subset)
+</code></pre>
+
+<!-- 25. List Sorting -->
+<pre><code>
+# List Sorting
+numbers = [5, 2, 8, 1, 3]
+sorted_numbers = sorted(numbers)
+print("Sorted Numbers:", sorted_numbers)
+</code></pre>
+
+<!-- 26. List Reverse -->
+<pre><code>
+# List Reverse
+numbers = [1, 2, 3, 4, 5]
+numbers.reverse()
+print("Reversed Numbers:", numbers)
+</code></pre>
+
+<!-- 27. String Formatting -->
+<pre><code>
+# String Formatting
+name = "Alice"
+age = 30
+formatted_string = f"My name is {name} and I am {age} years old."
+print(formatted_string)
+</code></pre>
+
+<!-- 28. Multi-line Strings -->
+<pre><code>
+# Multi-line Strings
+multiline_string = """This is a
+multi-line
+string."""
+print(multiline_string)
+</code></pre>
+
+<!-- 29. Basic Decorator -->
+<pre><code>
+# Basic Decorator
+# Basic decorator to log function calls
+def log_function_call(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling function {func.__name__} with arguments {args} and keyword arguments {kwargs}.")
+        return func(*args, **kwargs)
+    return wrapper
+
+@log_function_call
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print("Result:", result)
+</code></pre>
+
+<!-- 30. Reading JSON -->
+<pre><code>
+# Reading JSON
+import json
+
+# JSON string
+json_data = '{"name": "John", "age": 25, "city": "New York"}'
+data = json.loads(json_data)
+
+print("Name:", data['name'])
+print("Age:", data['age'])
+print("City:", data['city'])
+</code></pre>
+
+<!-- 31. Fibonacci Series -->
+<pre><code>
+# Fibonacci Series
+def fibonacci(n):
+    fib_series = [0, 1]
+    for _ in range(2, n):
+        fib_series.append(fib_series[-1] + fib_series[-2])
+    return fib_series
+
+result = fibonacci(10)
+print("Fibonacci Series:", result)
+</code></pre>
+
+<!-- 32. Palindrome Check -->
+<pre><code>
+# Palindrome Check
+def is_palindrome(word):
+    return word == word[::-1]
+
+result = is_palindrome("radar")
+print("Is Palindrome:", result)
+</code></pre>
+
+<!-- 33. Prime Numbers -->
+<pre><code>
+# Prime Numbers
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+result = is_prime(17)
+print("Is Prime:", result)
+</code></pre>
+
+<!-- 34. Factorial using Iteration -->
+<pre><code>
+# Factorial using Iteration
+def factorial_iterative(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+result = factorial_iterative(5)
+print("Factorial (Iterative):", result)
+</code></pre>
+
+<!-- 35. Factorial using Recursion -->
+<pre><code>
+# Factorial using Recursion
+def factorial_recursive(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial_recursive(n - 1)
+
+result = factorial_recursive(5)
+print("Factorial (Recursive):", result)
+</code></pre>
+
+<!-- 36. GCD (Greatest Common Divisor) -->
+<pre><code>
+# GCD (Greatest Common Divisor)
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+result = gcd(48, 18)
+print("GCD:", result)
+</code></pre>
+
+<!-- 37. LCM (Least Common Multiple) -->
+<pre><code>
+# LCM (Least Common Multiple)
+def lcm(a, b):
+    return abs(a * b) // gcd(a, b)
+
+result = lcm(12, 18)
+print("LCM:", result)
+</code></pre>
+
+<!-- 38. Binary to Decimal -->
+<pre><code>
+# Binary to Decimal
+binary_num = "1101"
+decimal_num = int(binary_num, 2)
+print("Decimal:", decimal_num)
+</code></pre>
+
+<!-- 39. Decimal to Binary -->
+<pre><code>
+# Decimal to Binary
+decimal_num = 13
+binary_num = bin(decimal_num).replace("0b", "")
+print("Binary:", binary_num)
+</code></pre>
+
+<!-- 40. Bubble Sort -->
+<pre><code>
+    # Bubble Sort
+    def bubble_sort(arr):
+        n = len(arr)
+        for i in range(n):
+            for j in range(0, n-i-1):
+                if arr[j] > arr[j+1]:
+                    arr[j], arr[j+1] = arr[j+1], arr[j]
+    
+    numbers = [64, 34, 25, 12, 22, 11, 90]
+    bubble_sort(numbers)
+    print("Sorted Numbers (Bubble Sort):", numbers)
+    </code>
+    </pre>
+    <!-- 41. Selection Sort --> 
+    
+<pre><code>
+</body>
+</html>
+```
